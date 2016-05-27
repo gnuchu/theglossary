@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-hover table-striped table-condensed sortable">
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+      <th>Originator</th>
+      <th>Example use</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terms.each do |term| %>
+      <tr>
+        <td><%= link_to term.term, term %></td>
+        <td><%= term.definition %></td>
+        <td><%= term.originator %></td>
+        <td><%= term.example_use %></td>
+        <td>
+          <%= link_to edit_term_path(term) do %>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <% end %>
+        </td>
+        <td>
+          <%= link_to term, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Term', new_term_path %>

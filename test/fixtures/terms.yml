@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term: MyString
+  definition: MyString
+  originator: MyString
+  example_use: MyString
+
+two:
+  term: MyString
+  definition: MyString
+  originator: MyString
+  example_use: MyString
